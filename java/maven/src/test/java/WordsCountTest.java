@@ -34,4 +34,13 @@ public class WordsCountTest {
         assertThat(result).isEqualTo("Error");
     }
 
+    @Test
+    public void should_return_answer4th_given_eg4th() {
+        String input = "the the   the car I was car The Car";
+        WordsCount wc = new WordsCount();
+        String result = wc.constructionData(input);
+
+        assertThat(result).isEqualTo("the 3\ncar 2\nCar 1\nI 1\nThe 1\nwas 1\n");
+    }
+
 }
