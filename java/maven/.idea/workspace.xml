@@ -51,8 +51,8 @@
       <file leaf-file-name="WordsCountTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/WordsCountTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="38" column="56" lean-forward="true" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
+            <state relative-caret-position="217">
+              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -193,7 +193,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
   </component>
-  <component name="RunManager" selected="JUnit.WordsCountTest.should_return_answer4th_given_eg4th">
+  <component name="RunManager" selected="JUnit.WordsCountTest">
     <configuration default="false" name="WordsCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="WordsCount" />
@@ -506,9 +506,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.WordsCountTest.should_return_answer4th_given_eg4th" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.WordsCountTest.should_return_answer2nd_given_eg2nd" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.WordsCountTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.WordsCountTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.WordsCountTest.should_return_answer4th_given_eg4th" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.WordsCountTest.should_return_answer2nd_given_eg2nd" />
         <item index="3" class="java.lang.String" itemvalue="Application.WordsCount" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.WordsCountTest.should_return_answer1st_given_eg1st" />
       </list>
@@ -532,6 +532,9 @@
       <configuration name="WordsCountTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="WordsCountTest - 2017.03.17 at 00h 45m 33s.xml">
+      <configuration name="WordsCountTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WordsCountTest - 2017.03.17 at 00h 57m 11s.xml">
       <configuration name="WordsCountTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="WordsCountTest_should_return_answer1st_given_eg1st - 2017.03.17 at 00h 35m 04s.xml">
@@ -660,8 +663,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/WordsCountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="38" column="56" lean-forward="true" selection-start-line="38" selection-start-column="56" selection-end-line="38" selection-end-column="56" />
+        <state relative-caret-position="217">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
