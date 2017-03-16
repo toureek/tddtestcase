@@ -18,6 +18,11 @@ public class WordsCount {
 
 
     public String constructionData(String input) {
+        if (input.trim().length() < 1) {
+            return "Error";
+        }
+
+
         Map hashmap = new HashMap();
 
         // 1st split contentStr for removing single-whitespace

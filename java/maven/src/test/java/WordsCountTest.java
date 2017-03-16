@@ -25,6 +25,13 @@ public class WordsCountTest {
         assertThat(result).isEqualTo("I 2\nthe 2\nwas 2\nWhen 1\nand 1\ncar 1\nsmall 1\n");
     }
 
+    @Test
+    public void should_return_answer3rd_given_eg3rd() {
+        String input = "";
+        WordsCount wc = new WordsCount();
+        String result = wc.constructionData(input);
 
+        assertThat(result).isEqualTo("Error");
+    }
 
 }
