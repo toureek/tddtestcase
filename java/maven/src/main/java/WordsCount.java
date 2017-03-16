@@ -10,11 +10,11 @@ public class WordsCount {
     }
 
 
-    public static void main(String args[]) {
-        WordsCount wc = new WordsCount();
-        String result = wc.constructionData("When the I was small and the car I was When");
-        System.out.print(result);
-    }
+//    public static void main(String args[]) {
+//        WordsCount wc = new WordsCount();
+//        String result = wc.constructionData("When the I was small and the car I was When");
+//        System.out.print(result);
+//    }
 
 
     public String constructionData(String input) {
@@ -24,6 +24,11 @@ public class WordsCount {
         String[] strList = input.split(" ");
         for (String item : strList) {
             String strTrimed = item.trim();  // remove all whitespace for each split word
+
+            if (strTrimed.length() < 1) {  // for example: [""]
+                continue;
+            }
+
             if (hashmap.containsKey(strTrimed)) {
                 Integer wordAppearCount = (Integer) hashmap.get(strTrimed);
                 hashmap.remove(strTrimed);
