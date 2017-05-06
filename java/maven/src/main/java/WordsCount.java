@@ -9,43 +9,55 @@ public class WordsCount {
         // Do nothing...
     }
 
+    public static void main(String args[]) {
+        String input = "When the I was small and the car I was When  I  I  and and and car was When ILL L I   ";
+        WordsCount wc = new WordsCount();
+        wc.calculateAndPrintWordsAppearCountResultFromInput(input);
+    }
 
-//    public static void main(String args[]) {
-//        WordsCount wc = new WordsCount();
-//        String result = wc.constructionData("When the I was small and the car I was When");
-//        System.out.print(result);
-//    }
-
-
-    public String constructionData(String input) {
-        if (input.trim().length() < 1) {
-            return "Error";
+    private void calculateAndPrintWordsAppearCountResultFromInput(String input) {
+        if (WordsCount.checkInputContentAvaliable(input)) {
+            HashMap hashMap = convertInputToWordsCountHashmap(input);
+            List list = sortWordsCountHashmapToList(hashMap);
+            String result = finalResultString(list);
+            System.out.print(result);
         }
+        else {
+            System.out.print("Error");
+        }
+    }
 
+    public static boolean checkInputContentAvaliable(String input) {
+        return  input != null && input.trim().length() > 0;
+    }
 
-        Map hashmap = new HashMap();
-
-        // 1st split contentStr for removing single-whitespace
+    private HashMap convertInputToWordsCountHashmap(String input) {
+        HashMap hashmap = new HashMap();
         String[] strList = input.split(" ");
-        for (String item : strList) {
-            String strTrimed = item.trim();  // remove all whitespace for each split word
-
-            if (strTrimed.length() < 1) {  // for example: [""]
-                continue;
-            }
-
-            if (hashmap.containsKey(strTrimed)) {
-                Integer wordAppearCount = (Integer) hashmap.get(strTrimed);
-                hashmap.remove(strTrimed);
-                hashmap.put(strTrimed, wordAppearCount+1);
-            }
-            else {
-                hashmap.put(strTrimed, 1);  // construct a key-value object
-            }
+        for (String words : strList) {
+            String key = words.trim();
+            modifyValueInHashmap(key, hashmap);
         }
 
-        //  sorting
-        List<Map.Entry<String, Integer>> itemList = new ArrayList<Map.Entry<String, Integer>>(hashmap.entrySet());
+        return hashmap;
+    }
+
+    private void modifyValueInHashmap(String key, HashMap hashmap) {
+        if (!WordsCount.checkInputContentAvaliable(key) || hashmap == null) {
+            return;
+        }
+
+        if (hashmap.containsKey(key)) {
+            Integer wordAppearCount = (Integer)hashmap.get(key);
+            hashmap.remove(key);
+            hashmap.put(key, wordAppearCount+1);
+        }  else {
+            hashmap.put(key, 1);
+        }
+    }
+
+    private List sortWordsCountHashmapToList(HashMap inputMap) {
+        List<Map.Entry<String, Integer>> itemList = new ArrayList<Map.Entry<String, Integer>>(inputMap.entrySet());
         Collections.sort(itemList, new Comparator<Map.Entry<String, Integer>>() {
             public int compare(Map.Entry<String, Integer> objA, Map.Entry<String, Integer> objB) {
                 if (objB.getValue() == objA.getValue()) {
@@ -56,10 +68,13 @@ public class WordsCount {
             }
         });
 
-        //  print object after sorting
+        return itemList;
+    }
+
+    private String finalResultString(List inputList) {
         String result = "";
-        for (int i = 0; i < itemList.size(); i++) {
-            String content = itemList.get(i).toString();
+        for (int i = 0; i < inputList.size(); i++) {
+            String content = inputList.get(i).toString();
             result += content.replace("=", " ") + "\n";
         }
 
